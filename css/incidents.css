@@ -1,0 +1,77 @@
+.incidentTiles {
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.incidentTile {
+    display: none;
+    border: 1px solid #004C9B;
+    border-radius: 5px;
+    width: 50vw;
+    height: 20vh;
+    margin-bottom: 3vh;
+}
+
+.incidentContents {
+    margin: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.incidentTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #343A40;
+    margin-top: 1vh;
+}
+
+.date {
+    margin-top: 0;
+    color: #868E96;
+    margin-bottom: 1vh;
+}
+
+.description {
+    margin-bottom: 1vh;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+.details {
+    color: #007BFF;
+}
+
+.reject {
+    float: right;
+    background-color: #DC3545;
+    border: none;
+    width: 75px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.approve {
+    float: right;
+    background-color: #38DC35;
+    border: none;
+    width: 75px;
+    height: 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+.incidentDetails {
+    width: 40vw;
+    height: 30vh;
+    overflow: auto;
+}
+
+#reportedIncidents {
+    display: flex;
+}

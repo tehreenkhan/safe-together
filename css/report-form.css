@@ -1,0 +1,388 @@
+html {
+    scroll-behavior:smooth;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background:#7ebfeb;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #51b1f1;
+    border-radius: 5px;
+  }
+  
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  
+  h1 {
+    font-size: 50pt;
+  }
+  
+  h2 {
+    font-size: 35px;
+  }
+  
+  /* TODO: modify */
+  label {
+    float: left;
+  }
+  
+  /* TODO: modify for Bootstrap */
+  input {
+    padding-top: 5px;
+    font-size: 20px;
+    width: 25vw;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #6E297B;
+  }
+  
+  button {
+    cursor:pointer;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #FFDD17;
+  }
+  
+  a:active {
+    color: #FFDD17;
+  }
+  
+  .error {
+    display: none;
+    color: red;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .success {
+    display: none;
+    color: #4BB543;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: fit-content;
+    text-align: center;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .logo-nav {
+    float: left;
+    width: 5%;
+    margin: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .logo-text {
+    float: left;
+    width: 35%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  
+  .topnav {
+    top: 0;
+    background-color: #6E297B;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 22px 16px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #713c7c;
+    padding-bottom: 18px;
+  }
+  
+  .topnav a.active {
+    background-color: #580b68;
+  }
+  
+  .center-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  } 
+  
+  .submitBtn {
+    font-size: 20px;
+    width: 25vw;
+    height:4vh;
+    border-radius: 5px;
+    background-color: #1C4C96;
+    border:  none;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .backBtn {
+    font-size: 20px;
+    font-weight: bold;
+    width: 25vw;
+    height:4vh;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    border: 3px solid #1C4C96;
+    color: #1C4C96;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    position: relative;
+    top: 5px;
+    padding-right: 15px;
+  }
+  
+  .navBar {
+    background-color: #6E297B;
+    width: 15vw;
+    height: 100vh;
+    color: #FFFFFF;
+    align-items: center;
+  }
+  
+  .navBar-contents {
+    font-size: large;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    line-height: 2.5;
+    vertical-align: middle;
+    align-items: center;
+  }
+  
+  .incidentTiles {
+    margin: 0 auto;
+    width: 50vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  
+  .incidentTile {
+    border: 1px solid #004C9B;
+    border-radius: 5px;
+    width: 50vw;
+    height: 20vh;
+    margin-bottom: 3vh;
+  }
+  
+  .incidentContents {
+    margin: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  
+  .incidentTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #343A40;
+    margin-top: 1vh;
+  }
+  
+  .date {
+    margin-top: 0;
+    color: #868E96;
+    margin-bottom: 1vh;
+  }
+  
+  .description {
+    margin-bottom: 1vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .details {
+    color: #007BFF;
+  }
+  
+  .reject {
+    float:right;
+    background-color: #DC3545;
+    border: none;
+    width: 75px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #FFFFFF;
+    position: relative;
+  }
+  
+  .approve { 
+    float: right;
+    background-color: #38DC35;
+    border: none;
+    width: 75px;
+    height: 20px;
+    border-radius: 5px; 
+    color: #FFFFFF;
+  }
+  
+  .incidentDetails {
+    width: 40vw;
+    height: 30vh;
+    overflow: auto;
+  }
+  
+  #accessSafeBtn {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #18A0FB;
+  }
+  
+  #homepage {
+    font-size: larger;
+    background-color: #0C4E95;
+    color: #F7F7F7;
+    height:75vh;
+    
+  }
+  
+  #about {
+    margin: 10px;
+    display: flex;
+    background-color: #FFFFFF;
+    color: #6E297B;
+    height:50vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  
+  #community {
+    display: flex;
+    background-color: #FFDD17;
+    color: #6E297B;
+    height:50vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  
+  #support {
+    background-color: #6E297B;
+    color: #FFFFFF;
+    height:25vh;
+  }
+  
+  #reportPage {
+    display: flex;
+    /* margin: 0 auto;
+    overflow: hidden; */
+  }
+  
+  /* #login-right {
+    margin: 0 auto;
+    line-height: 2;
+    text-align: left;
+    margin-top: 15vh;
+  } */
+
+  #report-right {
+    margin: 0 auto;
+    line-height: 2;
+    text-align: left;
+    margin-top: 15vh;
+  }
+  
+  #login-form {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #report-form {
+    display:flex;
+  }
+  
+  .incidentForm {
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  
+  /* .incident-form-field {
+    border: 1px solid #004C9B;
+    border-radius: 5px;
+    width: 50vw;
+    height: 20vh;
+    margin-bottom: 3vh;
+  }
+  
+  .incidentContents {
+    margin: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  } */
+  
+  .incidentField {
+    font-size: 20px;
+    font-weight: bold;
+    color: #343A40;
+    margin-top: 1vh;
+  }

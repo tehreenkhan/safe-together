@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+        #map {
+            height: 800px;
+            width: 1000px;
+        }
+
+        #legend {
+            
+            font-family: Arial, sans-serif;
+            background: #fff;
+            padding: 10px;
+            margin: 10px;
+            border: 3px solid #000;
+        }
+
+        #legend h3 {
+            margin-top: 0;
+        }
+
+        #legend img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Google Map</h1>
+    <div id="map"></div>
+    <div id="legend">
+        <h3>Points of Interest</h3>
+    </div>
+    <script src="map.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUy9D4EwtXcqui-88mAsBaNJF-UXDAsss&callback=initMap">
+        </script>
+</body>
+
+</html>

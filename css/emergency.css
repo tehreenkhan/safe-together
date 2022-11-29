@@ -37,6 +37,15 @@ label {
   float: left;
 }
 
+input {
+  padding-top: 5px;
+  font-size: 20px;
+  width: 25vw;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid #6E297B;
+}
+
 button {
   cursor:pointer;
 }
@@ -50,20 +59,25 @@ a:link {
 }
 
 a:hover {
-  opacity: 75%;
+  color: #FFDD17;
 }
 
-.clickable {
-  cursor: pointer;
+a:active {
+  color: #FFDD17;
 }
 
-.input {
-  padding-top: 5px;
-  font-size: 20px;
-  width: 25vw;
-  height: 35px;
-  border-radius: 5px;
-  border: 2px solid #6E297B;
+.error {
+  display: none;
+  color: red;
+  text-align: center;
+  margin: 0;
+}
+
+.success {
+  display: none;
+  color: #4BB543;
+  text-align: center;
+  margin: 0;
 }
 
 .modal {
@@ -86,8 +100,6 @@ a:hover {
   border: 1px solid #888;
   width: fit-content;
   text-align: center;
-  border-radius: 10px;
-  overflow-y: hidden;
 }
 
 .close {
@@ -150,7 +162,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   align-content: center;
-} 
+}
 
 .submitBtn {
   font-size: 20px;
@@ -190,13 +202,6 @@ a:hover {
   align-items: center;
 }
 
-.navBar a:hover {
-  color: #FFDD17;
-}
-
-.navBar a:active {
-  color: #FFDD17;
-}
 .navBar-contents {
   font-size: large;
   margin-left: 2vw;
@@ -204,4 +209,36 @@ a:hover {
   line-height: 2.5;
   vertical-align: middle;
   align-items: center;
+}
+
+.emergencyTiles {
+  margin: 0 auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+
+#emergencyProcedures {
+  display:flex;
+}
+
+.card-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  height: auto;
+}
+
+.btn-primary{
+  background-color: #1C4C96;
+}
+
+.btn-primary:hover{
+  background-color: #6E297B;
+}
+
+.card{
+  width: 18rem;
+  height: 20rem;
 }

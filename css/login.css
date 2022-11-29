@@ -1,0 +1,40 @@
+.error {
+    display: none;
+    color: red;
+    text-align: center;
+    margin: 0;
+}
+
+.success {
+    display: none;
+    color: #4BB543;
+    text-align: center;
+    margin: 0;
+}
+
+#login-page {
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#login-left {
+    background-color: #1C4C96;
+    height: 100vh;
+    color: #FFFFFF;
+    width: 40vw;
+    padding-top: 20vh;
+    padding-left: 3vw;
+}
+
+#login-right {
+    margin: 0 auto;
+    line-height: 2;
+    text-align: left;
+    margin-top: 15vh;
+}
+
+#login-form {
+    font-size: 20px;
+    text-align: center;
+}

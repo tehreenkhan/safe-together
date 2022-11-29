@@ -1,0 +1,55 @@
+.walksafeTiles {
+  margin: 0 auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-right: 5vh;
+}
+
+.walksafeTilesLeft{
+
+width: 300px;
+position: absolute;
+left: 250px;
+top: 280px;
+min-height: 300px;
+}
+
+
+#walksafe {
+  display:flex;
+}
+/*
+.map-image{
+position: fixed;
+right: 0px;
+bottom: 0px;
+width: 4%;
+  max-width: 100%;
+height: auto;
+}
+*/
+
+
+.bold{
+font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.btn-primary{
+  background-color: #1C4C96;
+}
+
+.btn-primary:hover{
+  background-color: #6E297B;
+}
+
+#map {
+  width: 450px;
+  height: auto;
+  /* padding-top: 10%;
+  padding-right:20%; */
+}

@@ -1,4 +1,4 @@
-import { db } from "/js/firebase.js"
+import { db } from "./firebase.js"
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 var map;

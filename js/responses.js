@@ -27,4 +27,12 @@ function getBotResponse(input) {
     } else {
         return "Try asking something else!";
     }
+    
+      if (input == "hello") {
+        return "Ready to activate walk safe assistance?";
+    } else if (input == "goodbye") {
+        return "Thank you for using WalkSafe assistance. Talk to you later!";
+    } else {
+        return "Try asking something else!";
+    }
 }

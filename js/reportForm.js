@@ -1,5 +1,5 @@
-//import { db } from "js/firebase.js"
-//import { collection, addDoc, doc, setDoc, Timestamp, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { db } from "./firebase.js"
+import { collection, addDoc, doc, setDoc, Timestamp, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 $(function () {$;
   console.log("REPORT FORM SCRIPT IS RUNNING");

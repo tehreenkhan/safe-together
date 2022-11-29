@@ -1,4 +1,4 @@
-import { db } from "/js/firebase.js"
+import { db } from "./firebase.js"
 import { collection, addDoc, doc, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 var current_page = 1;

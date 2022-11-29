@@ -32,7 +32,7 @@
 
 <body id="mapPage">
     <div class="navBar">
-        <a href="/"><img class="logo-text" src="images/TMU_logo.png" alt="logo"></a><br><br><br><br>
+        <a href="https://tehreenkhan.github.io/safe-together/index.html"><img class="logo-text" src="images/TMU_logo.png" alt="logo"></a><br><br><br><br>
         <div class="navBar-contents">
             <a class="clickable dashboardBtn"><img src="images/icons8-hut-24.png" alt="hut"
                     class="icon">Dashboard</a><br>
@@ -46,22 +46,30 @@
     <script type="module" src="js/map.js"></script>
     <div class="container">
         <div class="row">
-            <div class="col-sm" style="padding-top: 5%">
+            <div class="col-sm" style="padding-top: 50px; padding-left: 10px">
                 <div id="map"></div>
-            </div>
-            <div class="col-sm" style="padding-top: 5%">
-                <div id="legend">
-                    <h3>Points of Interest</h3>
-                    <label><input type="checkbox" checked="checked" name="myCheck1">Emergency Poles</label>
-                    <br><br>
-                    <label><input type="checkbox" checked="checked" name="myCheck2">Incidents</label>
-                    <br><br>
-                    <label><input type="checkbox" checked="checked" name="myCheck3">Security</label>
-                </div>
             </div>
         </div>
     </div>
-
+    <div class="container" style="padding-top: 50px">
+        <div class="row" style="padding-left: 10px"><a class="clickable listViewBtn"><button class="button">List View of Incidents</button></a></div>
+        <div class="row">
+            <div id="legend">
+                <h3>Legends</h3>
+                <label><input type="checkbox" checked="checked" name="myCheck1"><img src="images/phone.png">
+                    <h8>Emergency Poles</h8>
+                </label>
+                <br><br>
+                <label><input type="checkbox" checked="checked" name="myCheck2"><img src="images/warning.png">
+                    <h8>Incidents</h8>
+                </label>
+                <br><br>
+                <label><input type="checkbox" checked="checked" name="myCheck3"><img src="images/security.png">
+                    <h8>Security</h8>
+                </label>
+            </div>
+    </div>
+    </div>
 
 
 

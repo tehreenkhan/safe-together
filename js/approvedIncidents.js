@@ -112,7 +112,7 @@ function getApprovedIncident(id) {
 async function getAllApprovedIncidents(functionRun){
     const incidents = await getDocs(collection(db, "incidents"));
     incidents.forEach(doc => {
-        approvedIncidentsList.push({id: '' + doc.id, date: doc.data().Date.toDate(), geo: [doc.data().Geopoint._lat, doc.data().Geopoint._long], link: doc.data().Link, loc: doc.data().Location, type: doc.data().Type, onMap: doc.data().onMap});
+        approvedIncidentsList.push({id: '' + doc.id, date: doc.data().Date.toDate(), geo: [doc.data().Geopoint._lat, doc.data().Geopoint._long], link: doc.data().Link, loc: doc.data().Location, type: doc.data().Type});
     });
     functionRun();
 };

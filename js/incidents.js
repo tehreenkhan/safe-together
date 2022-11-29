@@ -29,7 +29,7 @@ function removeIncident(id){
         document.getElementById(''+ pages).remove();
     }
     
-    removeIncidentFromReported(id);
+    //removeIncidentFromReported(id);
 };
 
 async function removeIncidentFromReported(id) {
@@ -236,7 +236,7 @@ function webFunctions(){
 
     $('#approveForm').on('click', '.approveIncidentEdit', function(event) {
         removeIncident(document.getElementById('incidentID').value)
-        addApprovedIncidentToDB();
+        //addApprovedIncidentToDB();
         flashGreen();
         clearModal(approveIncidentModal);
     });

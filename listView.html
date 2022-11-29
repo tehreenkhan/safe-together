@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--JAVASCRIPT-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <!--BOOTSTRAP-->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <title>Incidents Reported</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/incidents.css">
+    <link rel="icon" href="images/TMU_logo.png">
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/approvedIncidents.js"></script>
+
+</head>
+
+<body id="reportedIncidents">
+    <div class="navBar">
+        <a href="/"><img class="logo-text" src="images/TMU_logo.png" alt="logo"></a><br><br><br><br>
+        <div class="navBar-contents">
+            <a class="clickable dashboardBtn"><img src="images/icons8-hut-24.png" alt="hut" class="icon">Dashboard</a><br>
+            <a class="clickable mapBtn"><img src="images/icons8-map-24.png" alt="map" class="icon">Map</a><br>
+            <a class="clickable emProceduresBtn"><img src="images/icons8-siren-24.png" alt="siren" class="icon">Emergency Procedures</a><br>
+            <a class="clickable settingsBtn"><img src="images/icons8-engineering-24.png" alt="settings" class="icon">Account Settings</a><br>
+        </div>
+    </div>
+
+    <div id="approvedIncidentTiles" class="incidentTiles">
+        <h2>Incidents List</h2>
+    </div>
+
+    <div id="viewDetailsModalApproved" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span><br><br>
+            <div class="incidentDetails">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

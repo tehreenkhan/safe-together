@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--JAVASCRIPT-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+    
+    <!--BOOTSTRAP-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="icon" href="images/TMU_logo.png">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    
+    <div class="topnav">
+        <img class="logo-nav" src="images/TMU_logo.png" alt="logo">   
+        <a href="#about">About</a>
+        <a href="#community">Community</a>
+        <a href="#support">Support</a>
+        <button id="accessSafeBtn" type="button">Access Safe Together</button>
+    </div>
+
+    <div class="center-text" id="homepage">
+        <h1>TMU: SAFE TOGETHER</h1><br>
+        <p>We value our community’s safety and security</p>
+    </div>
+
+    <div id="about">
+        <img src="images/vic-banner.jpg" alt="logo" style="padding-right: 10vw;">   
+        <div>
+            <h1>About</h1>
+            <p>In an urgent situation on campus, we want to increase the likelihood that you receive the latest information about what
+            is happening as soon as possible. This way, you can make informed decisions that prioritize your personal safety.</p>
+        </div>
+    </div>
+
+    <div id="community">
+        <div>
+            <h1>Community</h1>  
+            <p>Community Safety and Security at TMU is committed to keeping our campus safe for all by providing services, resources
+            and tools. Working together with students, faculty, staff, community members and more is how we will ensure we are
+            successful in this aim.</p>
+        </div>
+        <img src="images/walk-safe.jpg" alt="logo" style="padding: 1vw; padding-left: 10vw;"> 
+    </div>
+    
+    <div class="center-text" id="support">
+        <h1>Support</h1>
+        <p>Emergencies are rare, but possible. In case of an emergency on the TMU campus, the aim of Community Safety and Security
+        is to ensure the safety and wellbeing of all community members.<br>
+            For technical issues please contact CSS Help Desk</p>
+    </div>
+</body>
+</html>

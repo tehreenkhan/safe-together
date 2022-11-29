@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- css style sheet for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!--JAVASCRIPT-->
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"></script>
+
+        <!--BOOTSTRAP-->
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <title>Walk Safe</title>
+
+    <link rel="stylesheet" href="css/walksafe.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="icon" href="images/TMU_logo.png">
+    <script type="module" src="js/main.js"></script>
+
+</head>
+
+<body id="walksafe">
+  <!-- Navigation Bar -->
+  <div class="navBar">
+    <img
+      class="logo-text"
+      src="images/TMU_logo.png"
+      alt="logo"
+    /><br /><br /><br /><br />
+    <div class="navBar-contents">
+      <a href=""
+        ><img
+          src="images/icons8-hut-24.png"
+          alt="hut"
+          class="icon"
+        />Dashboard</a
+      ><br />
+      <a href=""
+        ><img src="images/icons8-map-24.png" alt="map" class="icon" />Map</a
+      ><br />
+      <a href=""
+        ><img
+          src="images/icons8-siren-24.png"
+          alt="siren"
+          class="icon"
+        />Emergency Procedures</a
+      ><br />
+      <a href=""
+        ><img
+          src="images/icons8-engineering-24.png"
+          alt="settings"
+          class="icon"
+        />Account Settings</a
+      ><br />
+      <a href="index.html"
+        ><img
+          src="images/icons8-logout-20.png"
+          alt="logout"
+          class="icon"
+        />Logout</a
+      ><br />
+    </div>
+  </div>
+
+
+  <div class="walksafeTiles" style="padding-left: 5%">
+    <h2>Walk Safe</h2>
+    <br>
+
+    <p>Our free service pairs you with a uniformed security crew member to escort
+      you to various locations on campus, including the subway and nearby parking lots.
+    <br><br>
+    This service is available to all TMU community members—including visitors—24
+      hours a day, 7 days a week.
+    <br><br>
+    When you’re ready to be picked up, call or email us. Please let the dispatcher
+    know if you have accommodation requirements so that we can best ensure your access to the WalkSafe Program.
+  </p>
+    <p><span class="bold">External phones:</span> 416-979-5040</p>
+    <p><span class="bold">Email:</span> walksafe@ryerson.ca</p>
+  
+    <p class = "bold">Service Areas: Boundaries</p>
+    <p>
+    <span class="bold">North:</span> Carlton/College Street <br>
+    <span class="bold">South:</span> Dundas Street<br>
+    <span class="bold">East:</span> Jarvis Street<br>
+    <span class="bold">West:</span> Yonge Street
+    </p>
+    <br>
+    <img src="images/walksafeimage.png" id="map">
+</div>
+
+<!-- <div class="walksafeTilesLeft"> -->
+
+<!-- <button type="button" class="btn btn-primary btn-lg">Start Walk Safe Chat</button> -->
+<!-- </div> -->
+  <!-- CHAT BAR BLOCK -->
+  <div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Chat with us!
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+  </div>
+
+<div class="walksafeTilesRight">
+
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/responses.js"></script>
+<script src="js/chat.js"></script>
+</html>

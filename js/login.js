@@ -61,7 +61,7 @@ function webFunctions(){
     });
 
     $('#loginBackBtn').click(function(){
-        self.location.href = "index.html";
+        self.location.href = "dashboard.html";
     });
     
     $('#forgotPassword').click(function() {

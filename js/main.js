@@ -25,4 +25,15 @@ function webFunctions(){
         self.location.replace("accountSettings.html");
     });
 
+    $('.walksafeBtn').click(function() {
+        self.location.replace("walksafe.html");
+    });
+
+    $('.reportIncidentBtn').click(function() {
+        self.location.replace("login.html");
+    });
+    $('.listViewBtn').click(function() {
+        self.location.replace("listView.html");
+    });
+
 };

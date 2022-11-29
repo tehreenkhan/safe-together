@@ -58,30 +58,6 @@ function initMarker() {
         }
     };
 
-    //Markers
-    // var markers_e = [
-    //     {
-    //         coords: { lat: 43.6600, lng: -79.3771 },
-    //         content: '<h2>Emergency Phone: Interior wall mount</h2> Located on the 1st floor in the lobby',
-    //         type: 'emergency_poles'
-    //     },
-    //     {
-    //         coords: { lat: 43.6596, lng: -79.3776 },
-    //         content: '<h2>Emergency phone: Exterior blue pole</h2>',
-    //         type: 'emergency_poles'
-    //     },
-    //     {
-    //         coords: { lat: 43.6594, lng: -79.3775 },
-    //         content: '<h2>Emergency phone: Interior wall mount</h2> Located on the 1st floor in the lobby',
-    //         type: 'emergency_poles'
-    //     },
-    //     {
-    //         coords: { lat: 43.6590, lng: -79.3775 },
-    //         content: '<h2>Emergency phone: Exterior blue pole</h2>',
-    //         type: 'emergency_poles'
-    //     }
-    // ];
-
     var markers = markers_e.concat(markers_i, markers_s);
 
     for (var i = 0; i < markers.length; i++) {

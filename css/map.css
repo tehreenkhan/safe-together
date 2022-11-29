@@ -1,11 +1,12 @@
 #map {
+    padding-left: 100px;
     height: 800px;
     width: 1000px;
 }
 
 #legend {
-    width: 800px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     font-family: Arial, sans-serif;
     background: #fff;
     padding: 10px;
@@ -251,4 +252,34 @@ a:hover {
     line-height: 2.5;
     vertical-align: middle;
     align-items: center;
+}
+
+.input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+}
+
+.button {
+    background-color: #1C4C96;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color:#6E297B;
 }

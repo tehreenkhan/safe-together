@@ -60,7 +60,7 @@ function getLocation(){
 };
 //Used for geolocation, finds coordinates of current location if uesr allows
 function showPosition(position) {
-  window.confirm("Geolocation has been successfully received!");
+  window.alert("Geolocation has been successfully received!");
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
   console.log("Latitude: " + latitude + 
@@ -109,7 +109,7 @@ function webFunctions() {
   setDoc(doc(db, "reported", id), docData);
   console.log(id)
 
-  window.confirm("Report has been successfully submitted! Your incident number is " + id + ". Record this number in case you wish to follow up on this incident.")
+  window.alert("Report has been successfully submitted! Your incident number is " + id + ". Record this number in case you wish to follow up on this incident.")
   form.reset();
   checkUser();
 });

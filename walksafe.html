@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- css style sheet for icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+
         <!--JAVASCRIPT-->
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous"></script>
@@ -35,18 +35,33 @@
 </head>
 
 <body id="walksafe">
-  <!-- Navigation Bar -->
-  <div class="navBar">
-        <a href="https://tehreenkhan.github.io/safe-together/index.html"><img class="logo-text" src="images/TMU_logo.png" alt="logo"></a><br><br><br><br>
-        <div class="navBar-contents">
-            <a class="clickable dashboardBtn"><img src="images/icons8-hut-24.png" alt="hut" class="icon">Dashboard</a><br>
-            <a class="clickable mapBtn"><img src="images/icons8-map-24.png" alt="map" class="icon">Map</a><br>
-            <a class="clickable emProceduresBtn"><img src="images/icons8-siren-24.png" alt="siren" class="icon">Emergency
-                Procedures</a><br>
-            <a class="clickable settingsBtn"><img src="images/icons8-engineering-24.png" alt="settings" class="icon">Account
-                Settings</a><br>
-        </div>
+  <!-- NAV BAR -->
+    <div style="background-color: #580B68;">
+
+    <div class="vertical-nav " id="sidebar">
+    <div class="py-4 px-3 mb-4">
+      <div class="media d-flex align-items-center"><img src="images/TMU_logo.png" alt="..." width="65">
+      </div>
     </div>
+
+    <ul class="nav flex-column mb-0 ">
+      <li class="nav-item">
+        <a href="./dashboard.html" class="nav-link text-light font-italic font-italic">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a href="./map.html" class="nav-link text-light font-italic">Map</a>
+      </li>
+      <li class="nav-item">
+        <a href="./emergency.html" class="nav-link text-light font-italic">Emergency Procedures</a>
+      </li>
+      <li class="nav-item">
+        <a href="./accountSettings.html" class="nav-link text-light font-italic">Account Settings</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <!-- END OF NAV BAR -->
+
 
 
   <div class="walksafeTiles" style="padding-left: 5%">
@@ -64,7 +79,7 @@
   </p>
     <p><span class="bold">External phones:</span> 416-979-5040</p>
     <p><span class="bold">Email:</span> walksafe@ryerson.ca</p>
-  
+
     <p class = "bold">Service Areas: Boundaries</p>
     <p>
     <span class="bold">North:</span> Carlton/College Street <br>

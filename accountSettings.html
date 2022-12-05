@@ -26,21 +26,47 @@
 
     <link rel="stylesheet" href="css/accountSettings.css">
     <link rel="icon" href="images/TMU_logo.png">
-    <script type="module" src="js/main.js"></script>
+  
 </head>
 <body id="accountSettings">
-    <div class="navBar">
-        <a href="https://tehreenkhan.github.io/safe-together/index.html"><img class="logo-text" src="images/TMU_logo.png" alt="logo"></a><br><br><br><br>
-        <div class="navBar-contents">
-            <a class="clickable dashboardBtn"><img src="images/icons8-hut-24.png" alt="hut" class="icon">Dashboard</a><br>
-            <a class="clickable mapBtn"><img src="images/icons8-map-24.png" alt="map" class="icon">Map</a><br>
-            <a class="clickable emProceduresBtn"><img src="images/icons8-siren-24.png" alt="siren" class="icon">Emergency
-                Procedures</a><br>
-            <a class="clickable settingsBtn"><img src="images/icons8-engineering-24.png" alt="settings" class="icon">Account
-                Settings</a><br>
-        </div>
+  <!-- NAV BAR -->
+    <div style="background-color: #580B68;">
+
+    <div class="vertical-nav " id="sidebar">
+    <div class="py-4 px-3 mb-4">
+      <div class="media d-flex align-items-center"><img src="images/TMU_logo.png" alt="..." width="65">
+      </div>
     </div>
 
+    <ul class="nav flex-column mb-0 ">
+      <li class="nav-item">
+        <a href="./dashboard.html" class="nav-link text-light font-italic font-italic">
+                  <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Dashboard
+              </a>
+      </li>
+      <li class="nav-item">
+        <a href="./map.html" class="nav-link text-light font-italic">
+                  <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                  Map
+              </a>
+      </li>
+      <li class="nav-item">
+        <a href="./emergency.html" class="nav-link text-light font-italic">
+                  <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                  Emergency Procedures
+              </a>
+      </li>
+      <li class="nav-item">
+        <a href="./accountSettings.html" class="nav-link text-light font-italic">
+                  <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                  Account Settings
+              </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <!-- END OF NAV BAR -->
 <div class="settingsTiles" style="padding-left: 5%">
     <h2>Account Settings</h2>
 
@@ -55,7 +81,7 @@
         <div class="row">
             <div class="col-sm">
                 <h6><b>Mobile Push Notifications</b></h6>
-                <p>Recieve alerts on mobile via SMS</p> 
+                <p>Recieve alerts on mobile via SMS</p>
                 <label class="switch">
                     <input type="checkbox"></input>
                     <span class="slider round"></span>
@@ -68,7 +94,7 @@
         <div class="row">
             <div class="col-sm">
                 <h6><b>Email Notifications</b></h6>
-                <p>Recieve alerts via email associated with TMU account</p> 
+                <p>Recieve alerts via email associated with TMU account</p>
                 <label class="switch">
                     <input type="checkbox"></input>
                     <span class="slider round"></span>
@@ -82,7 +108,7 @@
             <div class="col-sm">
                 <h5><b>FAQ</b></h5>
                 <p><b>This is a question a user could have?</b></p>
-                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p> 
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
             </div>
         </div>
     </div>
@@ -90,7 +116,7 @@
         <div class="row">
             <div class="col-sm">
                 <p><b>This is a question a user could have?</b></p>
-                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p> 
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content</p>
             </div>
         </div>
     </div>
@@ -98,7 +124,8 @@
         <div class="row">
             <div class="col-sm">
                 <h5><b>Contact</b></h5>
-                <p>For any further inquires contact us via email at tmusafe@tmu.com</p> 
+                <p>For any further inquires contact us via email at tmusafe@tmu.com</p>
+                <br>
             </div>
         </div>
     </div>

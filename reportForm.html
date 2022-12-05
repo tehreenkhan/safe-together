@@ -22,7 +22,6 @@
     <!-- Javascript Files -->
     <script type="module" src="js/reportForm.js"></script>
     <script type="module" src="js/firebase.js"></script>
-      <script type="module" src="js/main.js"></script>
 
     <!--BOOTSTRAP-->
     <link
@@ -47,18 +46,31 @@
   </head>
 
   <body id="reportPage">
-    <!-- Navigation Bar -->
-    <div class="navBar">
-        <a href="https://tehreenkhan.github.io/safe-together/index.html"><img class="logo-text" src="images/TMU_logo.png" alt="logo"></a><br><br><br><br>
-        <div class="navBar-contents">
-            <a class="clickable dashboardBtn"><img src="images/icons8-hut-24.png" alt="hut" class="icon">Dashboard</a><br>
-            <a class="clickable mapBtn"><img src="images/icons8-map-24.png" alt="map" class="icon">Map</a><br>
-            <a class="clickable emProceduresBtn"><img src="images/icons8-siren-24.png" alt="siren" class="icon">Emergency
-                Procedures</a><br>
-            <a class="clickable settingsBtn"><img src="images/icons8-engineering-24.png" alt="settings" class="icon">Account
-                Settings</a><br>
+   <!-- NAV BAR -->
+      <div style="background-color: #580B68;">
+      <div class="vertical-nav " id="sidebar">
+      <div class="py-4 px-3 mb-4">
+        <div class="media d-flex align-items-center"><img src="images/TMU_logo.png" href="https://tehreenkhan.github.io/safe-together/index.html"alt="..." width="65">
         </div>
+      </div>
+
+      <ul class="nav flex-column mb-0 ">
+        <li class="nav-item">
+          <a href="./dashboard.html" class="nav-link text-light">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="./map.html" class="nav-link text-light">Map</a>
+        </li>
+        <li class="nav-item">
+          <a href="./emergency.html" class="nav-link text-light">Emergency Procedures</a>
+        </li>
+        <li class="nav-item">
+          <a href="./accountSettings.html" class="nav-link text-light">Account Settings</a>
+        </li>
+      </ul>
     </div>
+  </div>
+    <!-- END OF NAV BAR -->
 
     <!-- Report Incident Form -->
     <div class="contentFormatting">
@@ -85,9 +97,11 @@
           </select>
         </div>
         
+        <!-- Date and Time selector -->
+        <div class="form-row">
+          <label for="incident-date">Date / Time of Incident</label>
+        </div>
         <div class="form-group">
-          <!-- Date and Time selector -->
-          <label for="incident-date">Date / Time of Incident</label><br/>
           <input
             type="datetime-local"
             id="incident-date"
@@ -95,11 +109,12 @@
             required
           />
         </div>
-        <!-- TODO: show borders and figure out whats wrong -->
         <!-- Location and Map Button -->
-        <label for="location">Location</label><br />
         <div class="form-row">
-          <div class="form-group col-md-6">
+          <label for="location">Location</label>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 col-sm-4">
             <input
               type="text"
               class="form-control"
@@ -109,23 +124,26 @@
               required
             />
           </div>
-          <div class="form-group col-2">
+          <div class="form-group col-md-5 col-sm-1">
             <input
-              type="button"
-              class="btn btn-secondary"
-              id="location"
-              name="geolocation"
-              value="Select On Map"
-            />
+            type="button"
+            class="btn btn-info"
+            id="geolocation"
+            name="geolocation"
+            value="Current Location"
+          />
           </div>
         </div>
 
+        <!-- Description Field -->
+        <div class="form-row">
+          <label for="incident-description">Description</label>
+        </div>
         <div class="form-group">
-          <!-- Description Field -->
-          <label for="incident-description">Description</label><br />
           <textarea
             id="incident-description"
             name="incident-description"
+            style="max-width:100%;"
             rows="4"
             cols="50"
             required
@@ -135,7 +153,6 @@
 
         <div class="form-group" >
           <!-- Contact Information -->
-          <!-- TODO: ERROR on contactFunction() -->
           <p>Contact</p>
           <div class="checkbox">
             <label for="contact-choice" class="form-text text-muted" style="font-style: italic;">
@@ -162,7 +179,7 @@
               type="text"
               id="contact-email"
               name="contact-email"
-              value="{userEmail}"
+              value= "user"
               disabled
               readonly
             />
@@ -181,9 +198,6 @@
         <input type="submit" class="btn btn-primary" value="Submit" />
       </form>
     </div>
-
-
-
     
     </div>
   </body>

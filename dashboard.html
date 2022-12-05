@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- css style sheet for icons -->
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>        
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <!--JAVASCRIPT-->
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous"></script>
@@ -26,42 +26,71 @@
 
     <title>Dashboard</title>
 
-    <link rel="stylesheet" href="css/emergency.css">
+    
+    <!-- <link rel="stylesheet" href="css/emergency.css"> -->
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="icon" href="images/TMU_logo.png">
-    <script type="module" src="js/main.js"></script>
+  <!--     <script type="module" src="js/main.js"></script>-->
 </head>
 <body id="dashboard">
-    <!-- Navigation Bar -->
-  <div class="navBar">
-        <a href="https://tehreenkhan.github.io/safe-together/index.html"><img class="logo-text" src="images/TMU_logo.png" alt="logo"></a><br><br><br><br>
-        <div class="navBar-contents">
-            <a class="clickable dashboardBtn"><img src="images/icons8-hut-24.png" alt="hut" class="icon">Dashboard</a><br>
-            <a class="clickable mapBtn"><img src="images/icons8-map-24.png" alt="map" class="icon">Map</a><br>
-            <a class="clickable emProceduresBtn"><img src="images/icons8-siren-24.png" alt="siren" class="icon">Emergency
-                Procedures</a><br>
-            <a class="clickable settingsBtn"><img src="images/icons8-engineering-24.png" alt="settings" class="icon">Account
-                Settings</a><br>
+
+    <!-- NAV BAR -->
+      <div style="background-color: #580B68;">
+
+      <div class="vertical-nav " id="sidebar">
+      <div class="py-4 px-3 mb-4">
+        <div class="media d-flex align-items-center"><img src="images/TMU_logo.png" alt="..." width="65">
         </div>
+      </div>
+
+      <ul class="nav flex-column mb-0 ">
+        <li class="nav-item">
+          <a href="./dashboard.html" class="nav-link text-light font-italic font-italic">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                  Dashboard
+                </a>
+        </li>
+        <li class="nav-item">
+          <a href="./map.html" class="nav-link text-light font-italic">
+                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                    Map
+                </a>
+        </li>
+        <li class="nav-item">
+          <a href="./emergency.html" class="nav-link text-light font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    Emergency Procedures
+                </a>
+        </li>
+        <li class="nav-item">
+          <a href="./accountSettings.html" class="nav-link text-light font-italic">
+                    <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                    Account Settings
+                </a>
+        </li>
+      </ul>
     </div>
+    <!-- END OF NAV BAR -->
+
 
     </div>
     <div class="container">
+        <div class="incidents">
         <h2>Dashboard</h2>
-        <h3>Recent incidents</h3>
+        <h3>Recent Incidents</h3>
         <div class="row">
-        <div class="col-sm">
+        <div style="overflow-x:auto;" class="col-sm">
             <table>
                 <tr>
                     <td id="active" >An active incident
-                        <span>&#8594;</span>                   
+                        <span>&#8594;</span>
                     </td>
                 </tr>
                 <tr>
                     <td id="active">An active incident
                         <span>&#8594;</span>
                     </td>
-                    
+
                 </tr>
                 <tr>
                     <td id="resolved">An incident thats resolved
@@ -86,30 +115,26 @@
             </table>
         </div>
     </div>
-    <div class="row options" style="padding-top:7%">
-        <div class="col-sm">
+    <div class="row" style="padding-top:7%">
+        <div class="col-sm btns">
             <button type="button" class="btn btn-primary walksafeBtn" href="">WalkSafe</button>
         </div>
-        <div class="col-sm">
+        <div class="col-sm btns">
             <button type="button" class="btn btn-primary reportIncidentBtn" href="">Report Incident</button>
         </div>
-        <div class="col-sm">
+        <div class="col-sm btns">
             <button type="button" class="btn btn-primary reportIncidentBtn" href="">View Reported Incident</button>
         </div>
     </div>
-    <div class="row" style="padding-top:5%;" >
+     <div class="row" style="padding-top:5%;" >
         <div class="contact" class="col-sm" >
           <h5 style="padding-bottom:3%"><b>Emergency Contacts</b></h5>
-          <div><b id="emer-contact">Toronto Police Services:</b><p>911</p></div>
-          <div><b id="emer-contact">TMU Security:</b><p>416-979-5040</p></div>
-          <div><b id="emer-contact">TMU Security Email:</b><p>security@ryerson.ca</p></div>
+          <div id="emer-contact" >Toronto Police Services: <span style="font-weight: 20; color: black;">911</span></div>
+          <div id="emer-contact">TMU Security: <span style="font-weight: 20; color: black;">416-979-5040</span></div>
+          <div id="emer-contact">TMU Security Email: <span style="font-weight: 20;color: black;">security@ryerson.ca</span></div>
         </div>
     </div>
-
+    </div>
 </div>
-
-
-
-
 </body>
 </html>

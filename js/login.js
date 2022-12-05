@@ -7,8 +7,8 @@ $(function(){$
     webFunctions();
 });
 
-function ifUserExist(email, password){
-    getDoc(doc(db, "users", email)).then(docSnap => {
+function ifUserExist(id, password){
+    getDoc(doc(db, "users", id)).then(docSnap => {
         if (docSnap.exists()) {
             console.log("Document data:", docSnap.data());
             if(docSnap.data().Password == password){
@@ -19,6 +19,7 @@ function ifUserExist(email, password){
                 else {
                     self.location.replace("reportForm.html",);
                 }
+                localStorage.setItem("userID", id);
                 return;
             }
             else {

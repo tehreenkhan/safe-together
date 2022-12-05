@@ -1,5 +1,5 @@
 import { db } from "./firebase.js"
-import { collection, addDoc, doc, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { collection, addDoc, doc, getDocs, deleteDoc, Timestamp, GeoPoint } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 var current_page = 1;
 var records_per_page = 3;
@@ -29,7 +29,7 @@ function removeIncident(id){
         document.getElementById(''+ pages).remove();
     }
     
-    //removeIncidentFromReported(id);
+    removeIncidentFromReported(id);
 };
 
 async function removeIncidentFromReported(id) {
@@ -37,16 +37,17 @@ async function removeIncidentFromReported(id) {
 }
 
 async function addApprovedIncidentToDB(){
-        var date = document.getElementById('incidentDate').value;
-        var geo = document.getElementById('incidentGeopoint').value;
-        var link = document.getElementById('incidentLink').value;
-        var loc = document.getElementById('incidentLoc').value;
-        var type = document.getElementById('incidentType').value;
+    var date = document.getElementById('incidentDate').value;
+    var geoN = document.getElementById('incidentGeopointN').value;
+    var geoW = document.getElementById('incidentGeopointW').value;
+    var link = document.getElementById('incidentLink').value;
+    var loc = document.getElementById('incidentLoc').value;
+    var type = document.getElementById('incidentType').value;
 
     try {
         const docRef = await addDoc(collection(db, "incidents"), {
-            Date: date,
-            Geopoint: geo,
+            Date: Timestamp.fromDate(new Date(date)),
+            Geopoint: new GeoPoint(geoN, geoW),
             Link: link,
             Location: loc,
             Type: type
@@ -175,7 +176,8 @@ function updateModal(incident, modal){
     if(modal == approveIncidentModal) {
         document.getElementById('incidentID').value = incident.id;
         document.getElementById('incidentDate').value = incident.date;
-        document.getElementById('incidentGeopoint').value = incident.geopoint;
+        document.getElementById('incidentGeopointN').value = incident.geo[0];
+        document.getElementById('incidentGeopointW').value = incident.geo[1];
         document.getElementById('incidentLink').value = incident.link;
         document.getElementById('incidentLoc').value = incident.loc;
         document.getElementById('incidentType').value = incident.type;
@@ -193,7 +195,8 @@ function clearModal(modal){
     if(modal == approveIncidentModal) {
         document.getElementById('incidentID').value = "";
         document.getElementById('incidentDate').value = "";
-        document.getElementById('incidentGeopoint').value = "";
+        document.getElementById('incidentGeopointN').value = "";
+        document.getElementById('incidentGeopointW').value = "";
         document.getElementById('incidentLink').value = "";
         document.getElementById('incidentLoc').value = "";
         document.getElementById('incidentType').value = "";
@@ -236,7 +239,7 @@ function webFunctions(){
 
     $('#approveForm').on('click', '.approveIncidentEdit', function(event) {
         removeIncident(document.getElementById('incidentID').value)
-        //addApprovedIncidentToDB();
+        addApprovedIncidentToDB();
         flashGreen();
         clearModal(approveIncidentModal);
     });

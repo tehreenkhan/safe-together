@@ -1,4 +1,4 @@
-import { db } from "firebase.js"
+import { db } from "./firebase.js"
 import { collection, addDoc, GeoPoint, doc, setDoc, Timestamp, getDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 var latitude = 0.0;

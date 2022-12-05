@@ -99,3 +99,12 @@ span {
     border: 2px solid black;
     background: white;
   }
+
+
+.btn-primary{
+  background-color: #1C4C96;
+}
+
+.btn-primary:hover{
+  background-color: #6E297B;
+}

@@ -1,14 +1,73 @@
+body { 
+  min-height: 100% 
+}
+
 .container {
-    padding-top: 5%;
-    padding-left: 5%;
+    height:100vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 .container h2 {
     font-weight: 60%;
     padding-bottom: 5%;
 }
-table td{
-    border: 1px solid black;
-    width: 800px;
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table td {
+  padding: .625em;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .btns {
+    margin: 1%;
+  }
 }
 
 #active {
@@ -17,6 +76,7 @@ table td{
 }
 #dashboard {
     display:flex;
+    background-color: #F3F6F4;
   }
 span {
     float: right;
@@ -28,13 +88,14 @@ span {
 
   #emer-contact {
     color: #1C4C96;
+    font-weight: bold;
   }
 
   div .contact {
     margin-top: 5%;
     margin-left: 2%;
-    height: auto; 
+    height: auto;
     width: 400px;
     border: 2px solid black;
+    background: white;
   }
-  

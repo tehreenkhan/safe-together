@@ -242,6 +242,7 @@
 
   #accountSettings {
     display:flex;
+    background-color: #F3F6F4;
   }
 
   .switch {

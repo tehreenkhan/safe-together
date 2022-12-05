@@ -15,7 +15,7 @@
 #login-page {
     display: flex;
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #login-left {

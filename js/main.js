@@ -30,8 +30,15 @@ function webFunctions(){
     });
 
     $('.reportIncidentBtn').click(function() {
+        localStorage.setItem("page", "report");
         self.location.replace("login.html");
     });
+    
+    $('.reportedIncidentBtn').click(function() {
+        localStorage.setItem("page", "viewReports");
+        self.location.replace("login.html");
+    });
+    
     $('.listViewBtn').click(function() {
         self.location.replace("listView.html");
     });

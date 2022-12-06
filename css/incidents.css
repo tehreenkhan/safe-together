@@ -48,6 +48,7 @@
     width: 50vw;
     height: 20vh;
     margin-bottom: 3vh;
+    overflow: hidden;
 }
 
 .incidentContents {
@@ -56,6 +57,7 @@
     margin-right: 1vw;
     text-overflow: ellipsis;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .incidentTitle {
@@ -111,4 +113,81 @@
 
 #reportedIncidents {
     display: flex;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .incidentTile {
+        width: 70vw;
+    }
+
+    .incidentTitle {
+        margin-top: 0vh;
+    }
+
+    .description {
+        margin-bottom: 0vh;
+    }
+    
+    .date {
+        margin-bottom: 0vh;
+    }
+
+    .reject {
+        width: 60px;
+        height: 15px;
+    }
+
+    .approve {
+        width: 60px;
+        height: 15px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .incidentTile {
+        height: 20vh;
+    }
+
+    .incidentTitle {
+        margin-top: 0vh;
+    }
+
+    .description {
+        margin-bottom: 0vh;
+    }
+
+    .date {
+        margin-bottom: 0vh;
+    }
+
+    .reject {
+        width: 60px;
+        height: 20px;
+    }
+
+    .approve {
+        width: 60px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .description {
+        margin-bottom: 0vh;
+    }
+
+    .date {
+        margin-bottom: 0vh;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1500px) {
+    .description {
+        margin-bottom: 0vh;
+    }
+
+    .date {
+        margin-bottom: 0vh;
+    }
 }

@@ -15,7 +15,7 @@
 #login-page {
     display: flex;
     margin: 0 auto;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 #login-left {
@@ -37,4 +37,56 @@
 #login-form {
     font-size: 20px;
     text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        font-size:25px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    #login-left {
+        padding-top: 25vh;
+        padding-left: 1vw;
+    }
+    #login-right {
+        margin-left: 2vw;
+    }  
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size:40px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    #login-left {
+        padding-left: 1vw;
+    }
+    #login-right {
+        margin-left: 2vw;
+    }  
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #login-left {
+        width: 50vw;
+        padding-top: 7vh;
+        padding-left: 1vw;
+    }
+    #login-right {
+        margin-left: 2vw;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    #login-left {
+        padding-top: 10vh;
+    }
+    #login-right {
+        margin-top: 10vh;
+    }
 }

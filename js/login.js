@@ -7,18 +7,19 @@ $(function(){$
     webFunctions();
 });
 
-function ifUserExist(id, password){
+function ifUserExist(id, password, page){
     getDoc(doc(db, "users", id)).then(docSnap => {
         if (docSnap.exists()) {
             console.log("Document data:", docSnap.data());
             if(docSnap.data().Password == password){
                 console.log("user exists");
-                if(docSnap.data().Admin == true) {
+                if(docSnap.data().Admin == true && page == "viewReports") {
                     self.location.replace("incidentsReported.html");
                 }
                 else {
                     self.location.replace("reportForm.html",);
                 }
+                localStorage.clear();
                 localStorage.setItem("userID", id);
                 return;
             }
@@ -58,7 +59,7 @@ function webFunctions(){
             return;
         }
 
-        ifUserExist(email, password);
+        ifUserExist(email, password, localStorage.getItem("page"));
     });
 
     $('#loginBackBtn').click(function(){

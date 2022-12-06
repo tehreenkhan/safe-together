@@ -16,6 +16,9 @@ function ifUserExist(id, password, page){
                 if(docSnap.data().Admin == true && page == "viewReports") {
                     self.location.replace("incidentsReported.html");
                 }
+                else if (page == "viewReports"){
+                    self.location.replace("dashboard.html");
+                }
                 else {
                     self.location.replace("reportForm.html",);
                 }

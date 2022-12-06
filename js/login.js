@@ -17,6 +17,7 @@ function ifUserExist(id, password, page){
                     self.location.replace("incidentsReported.html");
                 }
                 else if (page == "viewReports"){
+                    alert("Sorry, this page is only for Admins");
                     self.location.replace("dashboard.html");
                 }
                 else {

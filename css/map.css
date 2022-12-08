@@ -284,3 +284,47 @@ a:hover {
 .button:hover {
     background-color:#6E297B;
 }
+
+@media screen and (min-width: 200px) and (max-width: 480px) {
+    #map {
+        padding-left: 10px;
+        height: 300px;
+        width: 250px;
+    }
+    #legend {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #map {
+        padding-left: 10px;
+        height: 300px;
+        width: 250px;
+    }
+    #legend {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #map {
+        padding-left: 10px;
+        height: 600px;
+        width: 450px;
+    }
+    #legend {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1500px) {
+    #map {
+        padding-left: 10px;
+        height: 800px;
+        width: 1000px;
+    }
+}
